@@ -19,8 +19,8 @@ class ADE20KSegmentation(BaseMMSeg):
             **kwargs,
         )
         self.names, self.colors = utils.dataset_cat_description(ADE20K_CATS_PATH)
-        self.n_cls = 150
-        self.ignore_label = 0
+        self.n_cls = 8
+        self.ignore_label = 7
         self.reduce_zero_label = True
 
     def update_default_config(self, config):
@@ -33,8 +33,10 @@ class ADE20KSegmentation(BaseMMSeg):
             config.data.trainval.data_root = path / "ADEChallengeData2016"
         elif self.split == "val":
             config.data.val.data_root = path / "ADEChallengeData2016"
-        elif self.split == "test":
-            config.data.test.data_root = path / "release_test"
+        #elif self.split == "test":
+            #config.data.test.data_root = path / "release_test"
+        #    config.data.val.data_root = path / "ADEChallengeData2016"
+
         config = super().update_default_config(config)
         return config
 
