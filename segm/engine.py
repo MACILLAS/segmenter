@@ -17,7 +17,7 @@ def train_one_epoch(
     amp_autocast,
     loss_scaler,
 ):
-    criterion = torch.nn.CrossEntropyLoss(ignore_index=IGNORE_LABEL)
+    criterion = torch.nn.CrossEntropyLoss(weight=torch.FloatTensor([2, 3, 3, 2, 1, 1, 1, 0.3, 2]), ignore_index=IGNORE_LABEL)
     logger = MetricLogger(delimiter="  ")
     header = f"Epoch: [{epoch}]"
     print_freq = 100
