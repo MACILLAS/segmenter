@@ -54,3 +54,10 @@
   id: 7
   isthing: 0
   name: ignore
+- color:
+  - 100
+  - 80
+  - 50
+  id: 8
+  isthing: 0
+  name: spall

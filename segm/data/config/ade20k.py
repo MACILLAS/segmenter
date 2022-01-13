@@ -5,12 +5,12 @@ data_root = "data/ade/ADEChallengeData2016"
 img_norm_cfg = dict(
     mean=[123.675, 116.28, 103.53], std=[58.395, 57.12, 57.375], to_rgb=True
 )
-crop_size = (512, 512)
+crop_size = (720, 720)
 max_ratio = 4
 train_pipeline = [
     dict(type="LoadImageFromFile"),
     dict(type="LoadAnnotations", reduce_zero_label=True),
-    dict(type="Resize", img_scale=(512 * max_ratio, 512), ratio_range=(0.5, 2.0)),
+    dict(type="Resize", img_scale=(720 * max_ratio, 720), ratio_range=(0.5, 2.0)),
     dict(type="RandomCrop", crop_size=crop_size, cat_max_ratio=0.75),
     dict(type="RandomFlip", prob=0.5),
     dict(type="PhotoMetricDistortion"),
@@ -23,7 +23,7 @@ val_pipeline = [
     dict(type="LoadImageFromFile"),
     dict(
         type="MultiScaleFlipAug",
-        img_scale=(512 * max_ratio, 512),
+        img_scale=(720 * max_ratio, 720),
         flip=False,
         transforms=[
             dict(type="Resize", keep_ratio=True),
@@ -38,7 +38,7 @@ test_pipeline = [
     dict(type="LoadImageFromFile"),
     dict(
         type="MultiScaleFlipAug",
-        img_scale=(512 * max_ratio, 512),
+        img_scale=(720 * max_ratio, 720),
         flip=False,
         transforms=[
             dict(type="Resize", keep_ratio=True),
