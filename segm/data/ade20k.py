@@ -19,9 +19,9 @@ class ADE20KSegmentation(BaseMMSeg):
             **kwargs,
         )
         self.names, self.colors = utils.dataset_cat_description(ADE20K_CATS_PATH)
-        self.n_cls = 9
-        self.ignore_label = 7
-        self.reduce_zero_label = False
+        self.n_cls = 8
+        self.ignore_label = 0
+        self.reduce_zero_label = True
 
     def update_default_config(self, config):
         root_dir = dataset_dir()
