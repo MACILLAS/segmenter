@@ -2,55 +2,55 @@
   - 202
   - 150
   - 150
-  id: 1
+  id: 0
   isthing: 0
   name: wall
 - color:
   - 198
   - 186
   - 100
-  id: 2
+  id: 1
   isthing: 0
   name: beam
 - color:
   - 167
   - 183
   - 186
-  id: 3
+  id: 2
   isthing: 0
   name: column
 - color:
   - 255
   - 255
   - 133
-  id: 4
+  id: 3
   isthing: 0
   name: window_frame
 - color:
   - 192
   - 192
   - 206
-  id: 5
+  id: 4
   isthing: 0
   name: window_pane
 - color:
   - 32
   - 80
   - 160
-  id: 6
+  id: 5
   isthing: 0
   name: balcony
 - color:
   - 193
   - 134
   - 1
-  id: 7
+  id: 6
   isthing: 0
   name: slab
 - color:
   - 70
   - 70
   - 70
-  id: 8
+  id: 7
   isthing: 0
   name: ignore
