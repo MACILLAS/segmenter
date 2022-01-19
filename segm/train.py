@@ -142,7 +142,7 @@ def main(
             clip_grad=None,
             sched=scheduler,
             epochs=num_epochs,
-            min_lr=1e-5,
+            min_lr=2e-4,# 1e-4
             poly_power=0.9,
             poly_step_size=1,
         ),
